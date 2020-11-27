@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="../node_modules/axios/dist/axios.js"></script>
+    <script src="../cookie.js"></script>
+    <title>Congrats!</title>
+    <link rel="stylesheet" href="app.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div id="end" class="flex-center flex-column">
+        <h1 id="finalScore"></h1>
+        <form>
+          <h2>congratulations!</h2>
+          <div id="username"></div>
+          <button
+            class="btn save tooltip"
+            id="saveScoreBtn"
+            onclick="upDateUser(event)"
+          >
+            <span class="tooltiptext"
+              >Even if you had a higher score, it will be replaced by this
+              one</span
+            >
+            Save
+          </button>
+        </form>
+        <a class="btn playAgain" href="./game.html">Play Again</a>
+        <a class="btn ranking" href="./highscores.html">Ranking</a>
+        <a class="btn goHome" href="../main_interface/main_interface.html"
+          >Go Home</a
+        >
+      </div>
+    </div>
+    <script src="end.js"></script>
+    <script src="../cookie.js"></script>
+    <script>
+      if (!getCookie("LongLivePrincessHu")) {
+        window.location.href = "../index.html";
+      }
+    </script>
+  </body>
+</html>

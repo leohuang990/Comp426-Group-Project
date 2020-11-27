@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>User Settings</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./userSettings.js" type="module"></script>
+
+    <!-- navbar style -->
+    <style>
+      #barhover{
+        display: block;
+        background-color:#3e503c;
+        width:0.5vw;
+      }
+      #navbar{
+        display: none;
+      }
+      #barhover:hover #navbar {display: block;}
+      #barhover:hover {width:inherit;}
+    </style>
+
+  </head>
+
+  <body>
+
+      <!-- navbar -->
+      <div id="barhover">
+        <div id="navbar"></div>
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../navbar/nav.js"></script>
+        <script src="navlinks.js"></script>
+      </div>
+
+    <div id = "contents" style="width:100%; min-height: 100vh;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                background-color: #e0f0e9;
+                                text-align: center;
+    ">
+
+        <div class = "header"><h1>User Settings</h1></div>
+        <div id="title" style = "width:80%;"></div>
+      <div id="root" style = "width:80%;"></div>
+      <div class="field is-grouped">
+        <p class="control">
+          <a type = "button" class="btn button is-primary fas fa-arrow-circle-left" href="../main_interface/main_interface.html">
+            &nbsp Back
+          </a>
+        </p>
+        <p class="control">
+          <button type = "button" class = "btn fas fas fa-key button  is-warning" id = "changePassword">
+            Change Password
+          </button>
+        </p>
+        <p class="control">
+          <button type = "button" class = "btn fas fa-sign-out-alt button  is-danger" id = "logoutButton">
+             &nbsp Log Out
+          </button>
+        </p>
+      </div>
+    </div>
+
+    <script src="../node_modules/axios/dist/axios.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../cookie.js"></script>
+    <script src="./userSettings.js" type="module"></script>
+  </body>
+</html>

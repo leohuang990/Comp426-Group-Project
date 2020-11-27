@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inbox</title>
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../node_modules/bulma/css/bulma.css" />
+    <script src="mybox.js" type="module"></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- navbar style -->
+    <style>
+      #barhover {
+        display: block;
+        background-color: #3e503c;
+        width: 0.5vw;
+        min-height: 100vh;
+      }
+      #navbar {
+        display: none;
+      }
+      #barhover:hover #navbar {
+        display: block;
+      }
+      #barhover:hover {
+        width: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- navbar -->
+    <div id="barhover">
+      <div id="navbar"></div>
+      <script src="../node_modules/jquery/dist/jquery.js"></script>
+      <script src="../navbar/nav.js"></script>
+      <script src="navlinks.js"></script>
+    </div>
+
+    <div id="contents" style="width: 100%; min-height: 100vh">
+      <div id="title"></div>
+      <div id="root"></div>
+      <div id="details"></div>
+    </div>
+    <script src="../node_modules/axios/dist/axios.min.js"></script>
+    <script src="../cookie.js"></script>
+    <!-- <script src="mainbox.js" type="module"></script> -->
+
+    <script>
+      if (!getCookie("LongLivePrincessHu")) {
+        window.location.href = "../index.html";
+      }
+    </script>
+    <script src="mybox.js" type="module"></script>
+  </body>
+</html>

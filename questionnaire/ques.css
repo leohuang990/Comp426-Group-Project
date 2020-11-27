@@ -1,0 +1,79 @@
+div{
+    margin-left: 2%;
+    margin-right: 2%;
+    text-align: center;
+}
+
+.score {
+    text-shadow: 2px 2px 5px rgb(131, 247, 203);
+    text-align: center;
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 150%;
+    visibility: visible;
+    background-color: rgb(131, 214, 247);
+    border-radius: 30%;
+    border: 5px outset rgb(131, 247, 203);
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    width: 20em;
+    text-align: center;
+}
+
+.rateButtonEven {
+    outline:none;  
+    background-color:rgb(131, 214, 247);
+    border-radius: 50%;
+    padding: 14px 40px;
+    display: inline;
+    width: 17%;
+    margin: 1%;
+    height: 9.5vh;
+    transition-duration: 0.4s;
+    border-style: none;
+}
+
+.rateButtonOdd {
+    outline:none;  
+    background-color: rgb(131, 247, 203);
+    border-radius: 50%;
+    padding: 14px 40px;
+    display: inline;
+    width: 6vw;
+    margin: 1%;
+    height: 9.5vh;
+    transition-duration: 0.4s;
+    border-style: none;
+}
+
+.rateButtonEven:hover, .rateButtonOdd:hover {
+    cursor: pointer;
+    background-color:rgb(247, 131, 131) !important;
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.rateButtonEven:active, .rateButtonOdd:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.questions {
+    display: block;
+    width: 100%;
+    margin: 1%;
+    height: 10.5vh;
+    border-bottom-style: outset;
+    border-color: whitesmoke;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Login</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <section class="hero is-fullheight" style="background-color: #333">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column is-5-tablet is-4-desktop is-3-widescreen">
+              <div class="field">
+                <label for="" class="label" style="color: white"
+                  >User Name</label
+                >
+                <div class="control has-icons-left">
+                  <input
+                    type="userName"
+                    placeholder="e.g. Bob Smith"
+                    class="input"
+                    id="userName"
+                    required
+                  />
+                  <span class="icon is-small is-left">
+                    <i class="fa fa-user"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="field">
+                <label for="" class="label" style="color: white">Email</label>
+                <div class="control has-icons-left">
+                  <input
+                    type="email"
+                    placeholder="e.g. bobsmith@gmail.com"
+                    class="input"
+                    id="email"
+                    required
+                  />
+                  <span class="icon is-small is-left">
+                    <i class="fa fa-envelope"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="field">
+                <label for="" class="label" style="color: white"
+                  >Password</label
+                >
+                <div class="control has-icons-left">
+                  <input
+                    id="password"
+                    type="text"
+                    value=""
+                    placeholder="**********"
+                    class="input"
+                  />
+                  <input id="hidden" type="hidden" value="" />
+                  <span class="icon is-small is-left">
+                    <i class="fa fa-lock"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="field">
+                <label for="" class="label" style="color: white"
+                  >Re-Enter Password</label
+                >
+                <div class="control has-icons-left">
+                  <input
+                    id="password2"
+                    type="text"
+                    value=""
+                    placeholder="**********"
+                    class="input"
+                  />
+                  <input id="hidden2" type="hidden" value="" />
+                  <span class="icon is-small is-left">
+                    <i class="fa fa-lock"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="field content" id="message"></div>
+              <div class="field">
+                <a class="button is-success" id="signUpButton">Sign up</a>
+              </div>
+              <div class="field">
+                <a class="button" href="../login.html"
+                  >Already have an account? Click here to Login</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Include links to JavaScript files below -->
+    <script src="../node_modules/axios/dist/axios.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../cookie.js"></script>
+    <script>
+      if (getCookie("LongLivePrincessHu")) {
+        window.location.href = "../main_interface/main_interface.html";
+      }
+    </script>
+    <script src="./signUp.js"></script>
+    <script src="../ps.js"></script>
+    <script src="ps2.js"></script>
+  </body>
+</html>

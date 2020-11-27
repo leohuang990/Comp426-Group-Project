@@ -1,0 +1,180 @@
+.individual {
+  border-top: lightgray 1px solid;
+}
+
+body {
+  overflow-y: hidden;
+}
+
+#main2 {
+  position: fixed;
+  left: 16.7%;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  padding: 0;
+  overflow: hidden;
+}
+
+#black_shadow {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.5;
+  visibility: hidden;
+  z-index: 3;
+}
+
+#main1 {
+  position: fixed;
+}
+
+#main3 {
+  position: fixed;
+  left: 75%;
+}
+
+.individual p {
+  text-align: left;
+}
+
+#icon {
+  width: 70px;
+  height: 70px;
+}
+
+button {
+  background-color: Transparent;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+
+.individual:hover button {
+  opacity: 1;
+}
+
+textarea {
+  resize: none;
+}
+
+.individual button {
+  opacity: 0;
+}
+
+button.friend {
+  position: relative;
+  left: 250px;
+  top: -30px;
+}
+
+button.nav {
+  font-size: 24px;
+  text-align: left;
+  width: 250px;
+  height: 60px;
+
+  transition: all 0.2s ease-in-out;
+}
+
+ul {
+  overflow: auto;
+  max-height: 72vh;
+}
+
+ul li {
+  display: inline-block;
+  clear: both;
+  padding: 8px;
+  border-radius: 12px;
+  margin-bottom: 5px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.him {
+  background: #eee;
+  float: left;
+  font-size: larger;
+}
+
+.official#A {
+  background: lightgray;
+  float: left;
+  position: relative;
+  left: 40%;
+}
+
+.official#B {
+  background: lightgray;
+  float: left;
+  position: relative;
+  left: 39%;
+}
+
+.me {
+  float: right;
+  background: #0084ff;
+  color: #fff;
+}
+
+textarea {
+  width: 500px;
+  height: 80px;
+  border: none;
+  background-color: lightblue;
+}
+
+#add_fri {
+  float: right;
+}
+
+button.nav:hover {
+  transform: scale(1.05);
+}
+
+li {
+  max-width: 700px;
+  word-wrap: break-word;
+}
+
+#follow_input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+input {
+  display: inline-block;
+}
+input[type="text"] {
+  background-color: #f1f1f1;
+}
+
+input[type="submit"] {
+  background-color: DodgerBlue;
+  color: #fff;
+  cursor: pointer;
+}
+
+.wordDonebyLKH {
+  color: rgb(247, 131, 131);
+  background-color: rgb(243, 227, 227);
+  text-align: center;
+  font-weight: bolder;
+  font-size: 1.5em;
+  height: 1.5em;
+}
+
+.buttonLKHExpression {
+  /* position: relative; left: 54.25vw; top: 8.5vh; */
+  float: right;
+}
+.buttonLKHBackground {
+  /* position: relative; left: 50.9vw; top: 13.7vh; */
+  float: right;
+}
+.buttonLKHClear {
+  /* position: relative; left: 47.3vw; top: 19vh; */
+  float: right;
+}

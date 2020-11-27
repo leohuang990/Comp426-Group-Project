@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Main Interface</title>
+
+        <!-- Include links to CSS stylesheets below -->
+        <!-- <link rel="stylesheet" href="MI_style.css" /> -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+        <link rel="stylesheet" href="../node_modules/bulma/css/bulma.css"/>
+        <link rel="stylesheet" href="MI_style.css" />
+    </head>
+
+    <body>
+        <div id="main">
+            <div class="columns" style="margin: auto;">
+                <div id = 'main1' class="column is-2" style="height: 100vh; background-color: #e6f0e6;">
+                    <div id="navbar"></div>
+                        <script src="../node_modules/jquery/dist/jquery.js"></script>
+                        <script src="../navbar/nav.js"></script>
+                        <script src="navlinks.js"></script>
+                    </div>
+                </div>
+                <div id = 'black_shadow' ></div>
+                
+                <div id = "add_follow_window"style="background: white;border: black solid 1px;width: 370px;position: absolute; left: 40%; top: 30%; visibility: hidden; z-index: 5;height: 42px">
+                    <input id="follow_input" type="text"  placeholder="Username" style="width: 66.5%;height: 100%;margin: 0;"><button onclick="confirmFollow()" class="button" style="margin: 0;position: relative;left: 2px;height: 40px;">follow</button><button class="button" onclick="leave2()"style="margin: 0;display: inline-block;height: 40px;width: auto;position: relative; left: 1px"><i class="fas fa-times"></i></button>
+                    <div id="search_res"></div>
+                </div>
+
+                <div id = 'main2' class="column is-7" style="height: 100vh; background-color:  #ffa161;">
+                     
+                    <div id = "chatWindow"style="background: white url(./background/spot.png);border: black solid 1px;width: auto;height: 100vh;  z-index: 5; ">
+                    
+                        <div id = "leave"style="font-size: 5vh;width: max-content;margin: auto;text-align: center;border-bottom: black solid 1px;">Welcome to Group Chat!</div>
+                        <br>
+                        <!-- <em style="text-align: center;color: yellow;position: relative;font-size: larger;">Don't put sensitive information in chat window. Have fun!</em> -->
+                        
+                        <ul id = "chat-ul">
+                        </ul>
+
+                        <div class="field" style="position: absolute; bottom:0vh; width: 100%; height:19vh">
+
+                            <div class="control">
+                                        <button class = "buttonLKHExpression" id="expression" 
+                                    data-toggle="tooltip" 
+                                    data-placement="bottom" title="emoji"><i class="far fa-smile fa-2x"></i></button>
+                                    
+                                    <button class = "buttonLKHBackground" data-toggle="tooltip"
+                                    data-placement="bottom" title="background" id="background">
+                                    <i class="fas fa-image fa-2x"></i></button >
+                                    
+                                    <button class = "buttonLKHClear" data-toggle="tooltip" data-placement="bottom" title="clear" id = "clear">
+                                    <i class="fas fa-ban fa-2x"></i></button>
+                            
+                                <div class = "wordDonebyLKH">Remember: Press Ctrl + Enter to send!!!</div>
+                                <textarea id="textarea"class="textarea is-primary" placeholder="Press Ctrl + Enter to send" rows="2" style="resize:none;height:14.5vh; opacity: 0.9;"></textarea>
+                            </div>
+                        </div>
+                    </div>                  
+                </div>
+                <div id = 'main3' class="column is-3" style="background-color:#e6f0e6;height: 100vh;">
+                    <h1 style="text-align: center; font-size: 32px">Following List</h1>
+                    <br>
+                    <button onclick='showFollow()' id="add_follow" data-toggle="tooltip" data-placement="bottom" title="follow" style="position: relative; top: -7vh;float: right;"><i class="fas fa-plus-square fa-2x"></i></button>
+                    
+                    <div id="follow_column" style="height: 300px; overflow: auto;"></div>
+                    <div style="position: relative;; border-top: darkslategray solid 1px;text-align: center;">
+                        <h1 id="title">It must display something...</h1>
+                        <br>
+                        <div id="choice"> </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <script src="../cookie.js"></script>
+        
+        <script>
+            function changeThreeBtn(color){
+                $('#clear').css('color', color);
+                $('#background').css('color', color);
+                $('#expression').css('color', color);
+            }
+            if(!getCookie('LongLivePrincessHu')){
+              window.location.href = "../index.html";
+            }
+            $('#clear').on('click', function(){$('#chat-ul').empty()})
+            $('#background').on('click', function(){
+                $('#choice').empty();
+                $('#title').html('Please choose your background');
+                const div = `<div id="bg-options" style="display: grid;grid-template-columns: repeat(2, 1fr);grid-gap: 10px;">
+                                <button onclick="$('#chatWindow').css('background-image', 'url(./background/christmas-tree.jpg)');changeThreeBtn('black')" style="background: url('./background/epitome/christmas-tree.jpg');height: 125px;width: 175px;"></button>
+                                <button onclick="$('#chatWindow').css('background-image', 'url(./background/wave.jpg)');changeThreeBtn('red')" style="background: url('./background/epitome/wave.jpg');height: 125px;width: 175px;"></button>
+                                <button onclick="$('#chatWindow').css('background-image', 'url(./background/spot.png)');changeThreeBtn('black')" style="background: white url('./background/spot.png');height: 125px;width: 175px;"></button>
+                                <button onclick="$('#chatWindow').css('background-image', 'url(./background/UNC.jpg)');changeThreeBtn('blue')" style="background: url('./background/epitome/UNC.jpg');height: 125px;width: 175px;"></button>
+                            </div>`;
+                $('#choice').append(div)
+            })
+            $('#expression').on('click', function(){
+                $('#choice').empty();
+                $('#title').html('Please choose your expression to add');
+                const div = `<div id="bg-options" style="display: grid;grid-template-columns: repeat(3, 1fr);grid-gap: 15px;">
+                                <button class="ex-btn">w(ﾟДﾟ)w</button> <button class="ex-btn" onclick = "">( *︾▽︾)</button> <button class="ex-btn">[]~(￣▽￣)~*</button> 
+                                <button class="ex-btn">（￣.￣）</button> <button class="ex-btn">╮(╯▽╰)╭</button> <button class="ex-btn">（＞﹏＜）</button> 
+                                <button class="ex-btn">（→_→）</button><button class="ex-btn">（。_。）</button> <button class="ex-btn">o((⊙﹏⊙))o</button> 
+                                <button class="ex-btn">(*^▽^*)</button> <button class="ex-btn">(￣o￣) . z Z</button> <button class="ex-btn">(ง •_•)ง</button> 
+                                <button class="ex-btn">(✧◡✧) </button> <button class="ex-btn">(⊙﹏⊙)</button> <button class="ex-btn" style = "width: auto">ヾ(￣▽￣)Bye</button> 
+                                <button class="ex-btn">(o゜▽゜)o☆</button> <button class="ex-btn">ㄟ(≧◇≦)ㄏ</button> <button class="ex-btn" style = "width: auto">(＃￣～￣＃)</button> 
+                            </div>`;
+                $('#choice').append(div)
+                $('.ex-btn').on('click', function(){
+                    const value = $('#textarea').val();
+                    $('#textarea').val(value+$(this).html());
+                })
+            })
+        </script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="../node_modules/axios/dist/axios.js"></script>
+        <script src="./userSearch.js"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+        <script src="./main.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </body>
+</html>

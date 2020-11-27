@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>quiz</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="../node_modules/bulma/css/bulma.css"/>
+
+    <link rel="stylesheet" href="./app.css" />
+    <script src="../cookie.js"></script>
+    <script src="../node_modules/axios/dist/axios.js"></script>
+
+    <script>
+      if(!getCookie('LongLivePrincessHu')){
+        window.location.href = "../index.html";
+      }
+    </script>
+
+    <!-- navbar style -->
+    <style>
+      #barhover{
+        display: block;
+        background-color:#3e503c;
+        width:0.5vw;
+        min-height: 100vh;
+      }
+      #navbar{
+        display: none;
+      }
+      #barhover:hover #navbar {display: block;}
+      #barhover:hover {width:inherit;}
+    </style>
+
+  </head>
+  <body>
+    <!-- navbar -->
+    <div id="barhover">
+      <div id="navbar"></div>
+      <script src="../node_modules/jquery/dist/jquery.js"></script>
+      <script src="../navbar/nav.js"></script>
+      <script src="navlinks.js"></script>
+    </div>
+
+    <div class="container">
+      <div id="home" class="flex-center flex-column">
+        <h1>Extreme 9 + 1</h1>
+        <h3>Compete with Your Friend in a Quiz with 10 Questions</h1>
+        <a class="btn button is-info" href="./game.html">Play</a>
+        <a class="btn button is-warning" href="./highscores.html">Ranking</a>
+        <a class="btn button is-primary" href="../main_interface/main_interface.html">Back</a>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+#contents{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #CBD7D2;
+}
+
+#title{
+    width:80%;
+}
+
+#root{
+    width: 80%;
+}
+
+#details{
+    position: fixed;
+    top: 10%;
+}
+
+.post{
+    margin-top: 2vh;
+}
+
+.post .card-header{
+    background-color: #f89970;
+}
+
+.commentBox{
+    padding: 2vw; 
+    background-color: white
+}
+
+.commentBox .post .card-header{
+    background-color: orange;
+}
+
+.commentBox .post .card-footer{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #6b5f51;
+    padding: 0.2em;
+}
+
+.allreplies{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#create{
+    margin-left: 10px;
+}
+
+.post .card-footer{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #FAF2E8;
+    padding: 0.2em;
+}
+
+.comment {
+    /* border: 2px #702804 solid; */
+    margin-top: 2vh;
+}
+
+.comment .card-footer{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #54796d;
+    padding: 0.2em;
+}
+
+.comment .card-header{
+    background-color: #ec8d64;
+}
+
+.hero-head{
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+

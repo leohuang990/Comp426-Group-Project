@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang = "en" dir = "ltr">
+    <head>
+        <meta charset= "utf-8">
+        <title> Questionnaire </title>
+        <link rel="stylesheet" href="ques.css"> 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+        <link rel="stylesheet" href="../node_modules/bulma/css/bulma.css"/>
+        <script src="../cookie.js"></script>
+        <script src = "game.js" type="module" charset= "utf-8"></script>
+        <script src = "questions.js" type="module" charset= "utf-8"></script>
+        <script src="../node_modules/axios/dist/axios.js"></script>
+
+    <!-- navbar style -->
+    <style>
+        #barhover{
+          display: block;
+          background-color:#3e503c;
+          width:0.5vw;
+        }
+        #navbar{
+          display: none;
+        }
+        #barhover:hover #navbar {display: block;}
+        #barhover:hover {width:inherit;}
+      </style>
+    </head>
+    <body>
+  
+        <section class="hero is-primary">
+            <div class="hero-body">
+              <div class="container">
+                <h1 class="title">
+                    Personality Questionnaire
+                </h1>
+                <h2 class="subtitle">
+                    Find people who are similar to you
+                </h2>
+              </div>
+            </div>
+          </section>
+        <div class = "notification"> 
+                <div class = "score" id = "scoreBoard">
+                    <div id = "userName" class = "fas fa-user">&nbsp Play Play Play</div>
+                    <div> Progress: </div>
+                    <div id = "progress"> 0% </div>
+                </div>
+            </br>
+                <div>Rate from 1 to 5 how accurate are the following questions describing you!</div>
+                <div>1 = Inaccurate 2 = Somewhat Inaccurate 3 = Neutral 4 = Somewhat Accurate 5 = Accurate</div>
+            </br>
+            <div class = "field is-grouped">
+                <button class = "button is-danger center fas fa-play" id = "startButton"> &nbsp Play</button>
+                <button class = "button is-danger center fas fa-list" id = "matchButton"> &nbsp Current Matches</button>
+                <button class = "button is-danger center fas fa-home" id = "home" onclick=backHome()> &nbsp Back to Home</button>
+            </div>
+            <script type="text/javascript">
+                function backHome()
+                {
+                    location.href = '../main_interface/main_interface.html'; // TODO need change to real home address
+                
+                }
+            </script>
+        </div>
+
+        <div id = "body">
+            <div class="columns" id = "gameDisplay">
+                <div class = "column">
+                    <div id = "questionBody" class = "notification"></div>
+                </div>
+                <div class = "column">
+                    <div class = "notification" id = "rateBody"></div>
+                </div>
+            </div>
+            <div id = "submitDisplay"></div>
+        </div>
+
+    <div id = "scoreDisplay"></div>
+    </div>
+    <script src="../cookie.js"></script>
+    <script>
+      if(!getCookie('LongLivePrincessHu')){
+        window.location.href = "../index.html";
+      }
+    </script>
+
+    <audio controls autoplay loop>
+      <source src="summer.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    </body>
+</html>
