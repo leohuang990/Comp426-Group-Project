@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+
+    <title>Welcome to Miao Miao</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <section class="hero header">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            Miao Miao
+          </h1>
+          <h2 class="subtitle">
+            GET ON Miao Miao, GET ON THE WORLD
+          </h2>
+        </div>
+      </div>
+      <img src = './media/catLogo.jpg' class = 'logo'>
+    </section>
+    <br />
+    <div class="columns is-mobile is-multiline">
+      <div class="column is-three-fifths infoSection is-mobile is-multiline">
+        <div class="columns">
+          <div class="column">
+            <img src = './media/chat.jpg' width = 90% class = 'pic'>
+          </div>
+          <div class="column">
+            <h3>A revolutionary social web app</h3>
+            <p>Unlike other social apps where friends are recommended to you based on your friends list,
+               Miao Miao contains a personality test and will recommend people based on the test result.
+            </p>
+          </br>
+            <h3>A fun interacting experience</h3>
+            <p>
+               What's more, Miao Miao also provides you the opportunity to post anonymous questions/posts to your friends. 
+               Be bold and ask them things you would not dare to ask in person! Also, you can compete with users from all over the world in a quiz game. 
+               Try your best and become the smartest on the server! </p>
+            </br>
+            <h3>Unique chat functions</h3>
+            <p>Miao Miao allow users to connect anyone on the web without worrying about leaking of private information. 
+               We do not store the chat history at all! Once the webpage is closed, the chat history is gone forever. No need to be afraid of connecting with
+               others!</p>
+            </br>
+            <h3>Bad language filtering system</h3>
+            <p>Be aware, all these features combined does not mean this web app is a place where you spread hatred language. 
+               All posts, questions, and usernames will be filtered. </p>
+          </div>
+        </div>
+      </div>
+      <div class="column is-one-fifths btns">
+        <div class="field">
+          <a class="button is-success is-large is-fullwidth" id="loginButton">Login</a>
+        </div>
+        <div class="field">
+          <a class="button is-large is-fullwidth" id="signUpButton">Sign up</a>
+        </div>
+        <img src = './media/earth.jpg' width = 90% class = 'pic'>
+      </div>
+    </div>
+
+    <script src="./node_modules/axios/dist/axios.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./cookie.js"></script>
+    <script src="coverPage.js"></script>
+  </body>
+  <footer class="footer my-footer"> 
+    <div class="content">
+      <p>
+        <strong>Miao Miao</strong> © 2020 Disney BBQ (her Highness Princess Yinuo Hu and her three noble knights: Kaihao Liu, Mingli Zhang, and Haopeng Huang)
+      </p>
+      <p>
+        This website has utlized a personality test from the International Personality Item Pool (<a class = "botLink" href="https://ipip.ori.org">https://ipip.ori.org</a>)
+      </p>
+      <p>
+        This website has utlized two api from <a class = "botLink" href="https://opentdb.com">https://opentdb.com</a> (for quiz questions) and <a class = "botLink" href="https://promptapi.com/marketplace/description/bad_words-api">https://promptapi.com/marketplace/description/bad_words-api</a> (to filter bad words).
+      </p>
+    </div>
+  </footer>
+</html>

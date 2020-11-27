@@ -1,0 +1,125 @@
+body {
+  background-image: url("./media/01.gif");
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.header {
+  background-color: rgba(145, 175, 240, 0.699);
+}
+
+.btns {
+  background-color: rgba(145, 175, 240, 0.699);
+  height: 100vh;
+  margin-right: 2%;
+  margin-left: 2%;
+  border-radius: 25px;
+  animation: 1s ease-out 0s 1 slideInFromRight;
+  overflow: scroll;
+}
+
+.infoSection {
+  background-color: rgba(145, 175, 240, 0.699);
+  height: 100vh;
+  margin-right: 1.5vh;
+  margin-left: 1.5vh;
+  border-radius: 25px;
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+  overflow: scroll;
+}
+
+h1 {
+  font-size: 7vw !important;
+  font-family: Impact, Charcoal, sans-serif;
+  color: rgba(255, 255, 255, 0.849) !important;
+}
+h2 {
+  font-size: 5vh !important;
+  font-weight: 300;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: rgba(26, 11, 68, 0.849) !important;
+}
+h3 {
+  font-size: 3vh !important;
+  text-transform: uppercase;
+  font-weight: bold !important;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: rgba(26, 11, 68, 0.849) !important;
+  border-bottom: solid;
+  border-color: rgba(108, 20, 126, 0.849);
+}
+
+h3:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 (rgb(235, 90, 215));
+  transform: translateY(-0.1rem);
+  transition: transform 150ms;
+  background-color: rgb(99, 225, 241) !important;
+}
+
+.button {
+  margin-top: 3vh !important;
+}
+.button:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 (rgb(247, 131, 131));
+  transform: translateY(-0.1rem);
+  transition: transform 150ms;
+  background-color: rgb(247, 131, 131) !important;
+}
+
+.my-footer {
+  text-align: center;
+  background-color: rgba(169, 201, 250, 0.699) !important;
+}
+
+.botLink {
+  background-color: white !important;
+}
+
+p {
+  font-size: 2.3vh !important;
+  color: rgba(26, 11, 68, 0.849) !important;
+  font-weight: bold;
+  background-color: rgba(99, 223, 245, 0.3);
+}
+
+strong {
+  color: rgba(26, 11, 68, 0.849) !important;
+}
+
+.pic {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  mix-blend-mode: normal;
+}
+
+.logo {
+  width: 10vw;
+  position: absolute;
+  margin-left: 42vw;
+  margin-top: 2vh;
+  mix-blend-mode: multiply;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

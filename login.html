@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Login</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <section class="hero is-fullheight" style="background-color: #ecf5ff">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column is-5-tablet is-4-desktop is-3-widescreen">
+              <div class="field">
+                <label for="" class="label">Email</label>
+                <div class="control has-icons-left">
+                  <input
+                    type="email"
+                    placeholder="e.g. bobsmith@gmail.com"
+                    class="input"
+                    id="email"
+                  />
+                  <span class="icon is-small is-left">
+                    <i class="fa fa-envelope"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="field">
+                <label for="" class="label">Password</label>
+                <div class="control has-icons-left">
+                  <input
+                    id="password"
+                    type="text"
+                    value=""
+                    placeholder="**********"
+                    class="input"
+                  />
+                  <input id="hidden" type="hidden" value="" />
+                  <span class="icon is-small is-left">
+                    <i class="fa fa-lock"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="field content" id="message"></div>
+              <div class="field">
+                <a class="button is-success" id="loginButton">Login</a>
+              </div>
+              <div class="field">
+                <a class="button" href="./signUp/signUp.html">Sign up</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Include links to JavaScript files below -->
+
+    <script src="./node_modules/axios/dist/axios.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./cookie.js"></script>
+    <script>
+      if (getCookie("LongLivePrincessHu")) {
+        window.location.href = "./main_interface/main_interface.html";
+      }
+    </script>
+    <script src="login.js"></script>
+    <script src="./ps.js"></script>
+  </body>
+</html>
